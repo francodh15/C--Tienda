@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SOL_ALMACEN.PRECENTACION
 {
-    public class Prop_Articulos
+    public class Propiedades_Articulos
     {
         public int codigo_articulos { get; set; }
         public string descripcion_articulos { get; set; }

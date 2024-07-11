@@ -17,6 +17,11 @@ namespace SOL_ALMACEN.PRECENTACION
             InitializeComponent();
         }
 
+        #region "Mis Variables"
+        int nCodigoAr = 0;
+        int nEstadoGuarda = 0;
+        #endregion
+
         #region "Mis metodos"
 
         private void Formato_ar()
@@ -44,11 +49,74 @@ namespace SOL_ALMACEN.PRECENTACION
             dataGridView1.DataSource = datos.Listado_ar(cTexto);
             this.Formato_ar();
         }
+        private void Estado_texto(Boolean lEstado)
+        {
+            Txt_descripcion_ar.ReadOnly = !lEstado;
+            Txt_marca_ar.ReadOnly = !lEstado;
+            Txt_stock_actual.ReadOnly = !lEstado;
+
+        }
+        private void estadoBotonesProcesos(Boolean lEstado)
+        {
+            Btn_lupa_ca.Enabled = lEstado;
+            Btn_lupa_um.Enabled = lEstado;
+            Btn_cancelar.Enabled = lEstado;
+            Btn_guardar.Enabled = lEstado;
+
+            Btn_buscar.Enabled = !lEstado;
+            Txt_buscar.ReadOnly = lEstado;
+            dataGridView1.Enabled = !lEstado;
+        }
+
+        private void estadoBotonesPrincipales (Boolean lEstado)
+        {
+            Btn_nuevo.Enabled = lEstado;
+            Btn_eliminar.Enabled = lEstado;
+            Btn_actualizar.Enabled = lEstado;
+            Btn_reporte.Enabled = lEstado;
+            Btn_salir.Enabled = lEstado;
+        }
+
+        private void limpiezaTexto()
+        {
+            Txt_descripcion_ar.Text = "";
+            Txt_descripcion_ca.Text = "";
+            Txt_marca_ar.Text = "";
+            Txt_stock_actual.Text = "";
+            Txt_descripcion_um.Text = "";
+        }
+
+
         #endregion
 
         private void Frm_articulos_Load(object sender, EventArgs e)
         {
             this.Listado_ar("%");
+        }
+
+        private void Frm_articulos_Click(object sender, EventArgs e)
+        {
+            this.Listado_ar("%"+Txt_buscar.Text.Trim()+"%");
+        }
+
+        private void Btn_nuevo_Click(object sender, EventArgs e)
+        {
+            nEstadoGuarda = 1; //Nuevo Registro
+            this.Estado_texto(true);
+            this.estadoBotonesProcesos(true);
+            this.estadoBotonesPrincipales(false);
+            this.limpiezaTexto();
+            this.Txt_descripcion_ar.Focus();
+
+        }
+
+        private void Btn_cancelar_Click(object sender, EventArgs e)
+        {
+            this.estadoBotonesPrincipales(true);
+            this.Estado_texto(false);
+            this.estadoBotonesProcesos(false);
+            this.limpiezaTexto();
+            Txt_buscar.Focus();
         }
     }
 }

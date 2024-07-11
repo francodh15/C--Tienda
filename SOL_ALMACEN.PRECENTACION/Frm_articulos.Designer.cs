@@ -79,6 +79,7 @@
             // 
             this.Txt_descripcion_ar.Location = new System.Drawing.Point(99, 25);
             this.Txt_descripcion_ar.Name = "Txt_descripcion_ar";
+            this.Txt_descripcion_ar.ReadOnly = true;
             this.Txt_descripcion_ar.Size = new System.Drawing.Size(178, 20);
             this.Txt_descripcion_ar.TabIndex = 2;
             // 
@@ -86,6 +87,7 @@
             // 
             this.Txt_marca_ar.Location = new System.Drawing.Point(394, 24);
             this.Txt_marca_ar.Name = "Txt_marca_ar";
+            this.Txt_marca_ar.ReadOnly = true;
             this.Txt_marca_ar.Size = new System.Drawing.Size(178, 20);
             this.Txt_marca_ar.TabIndex = 4;
             // 
@@ -102,6 +104,7 @@
             // 
             this.Txt_descripcion_um.Location = new System.Drawing.Point(99, 61);
             this.Txt_descripcion_um.Name = "Txt_descripcion_um";
+            this.Txt_descripcion_um.ReadOnly = true;
             this.Txt_descripcion_um.Size = new System.Drawing.Size(178, 20);
             this.Txt_descripcion_um.TabIndex = 6;
             // 
@@ -116,6 +119,7 @@
             // 
             // Btn_lupa_um
             // 
+            this.Btn_lupa_um.Enabled = false;
             this.Btn_lupa_um.Location = new System.Drawing.Point(283, 61);
             this.Btn_lupa_um.Name = "Btn_lupa_um";
             this.Btn_lupa_um.Size = new System.Drawing.Size(32, 20);
@@ -125,6 +129,7 @@
             // 
             // Btn_lupa_ca
             // 
+            this.Btn_lupa_ca.Enabled = false;
             this.Btn_lupa_ca.Location = new System.Drawing.Point(578, 61);
             this.Btn_lupa_ca.Name = "Btn_lupa_ca";
             this.Btn_lupa_ca.Size = new System.Drawing.Size(32, 20);
@@ -136,6 +141,7 @@
             // 
             this.Txt_descripcion_ca.Location = new System.Drawing.Point(394, 62);
             this.Txt_descripcion_ca.Name = "Txt_descripcion_ca";
+            this.Txt_descripcion_ca.ReadOnly = true;
             this.Txt_descripcion_ca.Size = new System.Drawing.Size(178, 20);
             this.Txt_descripcion_ca.TabIndex = 9;
             // 
@@ -152,6 +158,7 @@
             // 
             this.Txt_stock_actual.Location = new System.Drawing.Point(99, 96);
             this.Txt_stock_actual.Name = "Txt_stock_actual";
+            this.Txt_stock_actual.ReadOnly = true;
             this.Txt_stock_actual.Size = new System.Drawing.Size(82, 20);
             this.Txt_stock_actual.TabIndex = 12;
             // 
@@ -172,6 +179,8 @@
             this.Btn_cancelar.TabIndex = 13;
             this.Btn_cancelar.Text = "Cancelar";
             this.Btn_cancelar.UseVisualStyleBackColor = true;
+            this.Btn_cancelar.Visible = false;
+            this.Btn_cancelar.Click += new System.EventHandler(this.Btn_cancelar_Click);
             // 
             // Btn_guardar
             // 
@@ -181,6 +190,7 @@
             this.Btn_guardar.TabIndex = 14;
             this.Btn_guardar.Text = "Guardar";
             this.Btn_guardar.UseVisualStyleBackColor = true;
+            this.Btn_guardar.Visible = false;
             // 
             // Btn_nuevo
             // 
@@ -190,6 +200,7 @@
             this.Btn_nuevo.TabIndex = 15;
             this.Btn_nuevo.Text = "Nuevo";
             this.Btn_nuevo.UseVisualStyleBackColor = true;
+            this.Btn_nuevo.Click += new System.EventHandler(this.Btn_nuevo_Click);
             // 
             // Btn_actualizar
             // 
@@ -283,6 +294,7 @@
             this.Name = "Frm_articulos";
             this.Text = "Frm_articulos";
             this.Load += new System.EventHandler(this.Frm_articulos_Load);
+            this.Click += new System.EventHandler(this.Frm_articulos_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
