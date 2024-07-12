@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\Franco\\source\\repos\\SOL_ALMACEN\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1C802468-27C9-488F-8B17-7BDD0F9F8996}|SOL_ALMACEN.PRECENTACION\\SOL_ALMACEN.PRECENTACION.csproj|c:\\users\\franco\\source\\repos\\sol_almacen\\sol_almacen.precentacion\\d_articulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C802468-27C9-488F-8B17-7BDD0F9F8996}|SOL_ALMACEN.PRECENTACION\\SOL_ALMACEN.PRECENTACION.csproj|solutionrelative:sol_almacen.precentacion\\d_articulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1C802468-27C9-488F-8B17-7BDD0F9F8996}|SOL_ALMACEN.PRECENTACION\\SOL_ALMACEN.PRECENTACION.csproj|c:\\users\\franco\\source\\repos\\sol_almacen\\sol_almacen.precentacion\\frm_articulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1C802468-27C9-488F-8B17-7BDD0F9F8996}|SOL_ALMACEN.PRECENTACION\\SOL_ALMACEN.PRECENTACION.csproj|solutionrelative:sol_almacen.precentacion\\frm_articulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C802468-27C9-488F-8B17-7BDD0F9F8996}|SOL_ALMACEN.PRECENTACION\\SOL_ALMACEN.PRECENTACION.csproj|C:\\Users\\Franco\\source\\repos\\SOL_ALMACEN\\sol_almacen.precentacion\\frm_articulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C802468-27C9-488F-8B17-7BDD0F9F8996}|SOL_ALMACEN.PRECENTACION\\SOL_ALMACEN.PRECENTACION.csproj|c:\\users\\franco\\source\\repos\\sol_almacen\\sol_almacen.precentacion\\frm_articulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C802468-27C9-488F-8B17-7BDD0F9F8996}|SOL_ALMACEN.PRECENTACION\\SOL_ALMACEN.PRECENTACION.csproj|solutionrelative:sol_almacen.precentacion\\frm_articulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,32 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Frm_articulos.cs",
-              "DocumentMoniker": "C:\\Users\\Franco\\source\\repos\\SOL_ALMACEN\\SOL_ALMACEN.PRECENTACION\\Frm_articulos.cs",
-              "RelativeDocumentMoniker": "SOL_ALMACEN.PRECENTACION\\Frm_articulos.cs",
-              "ToolTip": "C:\\Users\\Franco\\source\\repos\\SOL_ALMACEN\\SOL_ALMACEN.PRECENTACION\\Frm_articulos.cs",
-              "RelativeToolTip": "SOL_ALMACEN.PRECENTACION\\Frm_articulos.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAIA5wEIAAAAqAAAA",
+              "DocumentIndex": 0,
+              "Title": "D_Articulos.cs",
+              "DocumentMoniker": "C:\\Users\\Franco\\source\\repos\\SOL_ALMACEN\\SOL_ALMACEN.PRECENTACION\\D_Articulos.cs",
+              "RelativeDocumentMoniker": "SOL_ALMACEN.PRECENTACION\\D_Articulos.cs",
+              "ToolTip": "C:\\Users\\Franco\\source\\repos\\SOL_ALMACEN\\SOL_ALMACEN.PRECENTACION\\D_Articulos.cs",
+              "RelativeToolTip": "SOL_ALMACEN.PRECENTACION\\D_Articulos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-11T01:26:39.986Z",
+              "WhenOpened": "2024-07-12T16:37:32.862Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Frm_articulos.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Franco\\source\\repos\\SOL_ALMACEN\\SOL_ALMACEN.PRECENTACION\\Frm_articulos.cs",
               "RelativeDocumentMoniker": "SOL_ALMACEN.PRECENTACION\\Frm_articulos.cs",
               "ToolTip": "C:\\Users\\Franco\\source\\repos\\SOL_ALMACEN\\SOL_ALMACEN.PRECENTACION\\Frm_articulos.cs [Dise\u00F1o]",
               "RelativeToolTip": "SOL_ALMACEN.PRECENTACION\\Frm_articulos.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-11T01:43:15.698Z",
+              "WhenOpened": "2024-07-12T16:48:12.392Z",
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Frm_articulos.cs",
+              "DocumentMoniker": "C:\\Users\\Franco\\source\\repos\\SOL_ALMACEN\\SOL_ALMACEN.PRECENTACION\\Frm_articulos.cs",
+              "RelativeDocumentMoniker": "SOL_ALMACEN.PRECENTACION\\Frm_articulos.cs",
+              "ToolTip": "C:\\Users\\Franco\\source\\repos\\SOL_ALMACEN\\SOL_ALMACEN.PRECENTACION\\Frm_articulos.cs",
+              "RelativeToolTip": "SOL_ALMACEN.PRECENTACION\\Frm_articulos.cs",
+              "ViewState": "AQIAAPAAAAAAAAAAAAAMwAIBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T16:34:53.219Z",
+              "EditorCaption": ""
             }
           ]
         }
