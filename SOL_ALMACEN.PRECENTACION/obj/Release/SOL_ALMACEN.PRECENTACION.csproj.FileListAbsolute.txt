@@ -33,7 +33,6 @@ C:\Users\Franco\source\repos\SOL_ALMACEN\SOL_ALMACEN.PRECENTACION\bin\Release\Sy
 C:\Users\Franco\source\repos\SOL_ALMACEN\SOL_ALMACEN.PRECENTACION\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Franco\source\repos\SOL_ALMACEN\SOL_ALMACEN.PRECENTACION\bin\Release\System.Threading.Tasks.Extensions.xml
 C:\Users\Franco\source\repos\SOL_ALMACEN\SOL_ALMACEN.PRECENTACION\obj\Release\SOL_ALMACEN.PRECENTACION.csproj.AssemblyReference.cache
-C:\Users\Franco\source\repos\SOL_ALMACEN\SOL_ALMACEN.PRECENTACION\obj\Release\SOL_ALMACEN.PRECENTACION.Frm_articulos.resources
 C:\Users\Franco\source\repos\SOL_ALMACEN\SOL_ALMACEN.PRECENTACION\obj\Release\SOL_ALMACEN.PRECENTACION.Properties.Resources.resources
 C:\Users\Franco\source\repos\SOL_ALMACEN\SOL_ALMACEN.PRECENTACION\obj\Release\SOL_ALMACEN.PRECENTACION.csproj.GenerateResource.cache
 C:\Users\Franco\source\repos\SOL_ALMACEN\SOL_ALMACEN.PRECENTACION\obj\Release\SOL_ALMACEN.PRECENTACION.csproj.CoreCompileInputs.cache
@@ -114,3 +113,4 @@ C:\Users\Franco\source\repos\SOL_ALMACEN\SOL_ALMACEN.PRECENTACION\bin\Release\ru
 C:\Users\Franco\source\repos\SOL_ALMACEN\SOL_ALMACEN.PRECENTACION\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Franco\source\repos\SOL_ALMACEN\SOL_ALMACEN.PRECENTACION\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Franco\source\repos\SOL_ALMACEN\SOL_ALMACEN.PRECENTACION\obj\Release\SOL_ALMACEN.PRECENTACION.formReportesArticulos.resources
+C:\Users\Franco\source\repos\SOL_ALMACEN\SOL_ALMACEN.PRECENTACION\obj\Release\SOL_ALMACEN.PRECENTACION.dgvUnidadMedida.resources

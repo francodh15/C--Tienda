@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dgvUnidadMedida));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dgvUnidadMedida));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.Txt_descripcion_ar = new System.Windows.Forms.TextBox();
@@ -49,6 +49,7 @@
             this.Btn_cancelar = new System.Windows.Forms.Button();
             this.Btn_guardar = new System.Windows.Forms.Button();
             this.Btn_nuevo = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.Btn_actualizar = new System.Windows.Forms.Button();
             this.Btn_eliminar = new System.Windows.Forms.Button();
             this.Btn_reporte = new System.Windows.Forms.Button();
@@ -56,13 +57,13 @@
             this.Btn_buscar = new System.Windows.Forms.Button();
             this.Txt_buscar = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panelUnidadDeMedida = new System.Windows.Forms.Panel();
-            this.dgvUnidadDeMedida = new System.Windows.Forms.DataGridView();
             this.btnRetornarUm = new System.Windows.Forms.Button();
+            this.dgvUnidadDeMedida = new System.Windows.Forms.DataGridView();
             this.panelCategorias = new System.Windows.Forms.Panel();
             this.btnRetornarCa = new System.Windows.Forms.Button();
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelUnidadDeMedida.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnidadDeMedida)).BeginInit();
@@ -91,6 +92,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(891, 192);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -148,11 +150,12 @@
             this.Btn_lupa_um.Enabled = false;
             this.Btn_lupa_um.FlatAppearance.BorderColor = System.Drawing.Color.LightCyan;
             this.Btn_lupa_um.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_lupa_um.ImageKey = "search.png";
+            this.Btn_lupa_um.ImageList = this.imageList2;
             this.Btn_lupa_um.Location = new System.Drawing.Point(283, 61);
             this.Btn_lupa_um.Name = "Btn_lupa_um";
             this.Btn_lupa_um.Size = new System.Drawing.Size(32, 20);
             this.Btn_lupa_um.TabIndex = 7;
-            this.Btn_lupa_um.Text = ":::";
             this.Btn_lupa_um.UseVisualStyleBackColor = true;
             this.Btn_lupa_um.Click += new System.EventHandler(this.Btn_lupa_um_Click);
             // 
@@ -161,11 +164,12 @@
             this.Btn_lupa_ca.Enabled = false;
             this.Btn_lupa_ca.FlatAppearance.BorderColor = System.Drawing.Color.LightCyan;
             this.Btn_lupa_ca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_lupa_ca.ImageKey = "search.png";
+            this.Btn_lupa_ca.ImageList = this.imageList2;
             this.Btn_lupa_ca.Location = new System.Drawing.Point(578, 61);
             this.Btn_lupa_ca.Name = "Btn_lupa_ca";
             this.Btn_lupa_ca.Size = new System.Drawing.Size(32, 20);
             this.Btn_lupa_ca.TabIndex = 10;
-            this.Btn_lupa_ca.Text = ":::";
             this.Btn_lupa_ca.UseVisualStyleBackColor = true;
             this.Btn_lupa_ca.Click += new System.EventHandler(this.Btn_lupa_ca_Click);
             // 
@@ -251,6 +255,16 @@
             this.Btn_nuevo.UseVisualStyleBackColor = false;
             this.Btn_nuevo.Click += new System.EventHandler(this.Btn_nuevo_Click);
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "Create_New.png");
+            this.imageList1.Images.SetKeyName(1, "eliminar.png");
+            this.imageList1.Images.SetKeyName(2, "new-file.png");
+            this.imageList1.Images.SetKeyName(3, "reporte.png");
+            this.imageList1.Images.SetKeyName(4, "salir.png");
+            // 
             // Btn_actualizar
             // 
             this.Btn_actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
@@ -327,12 +341,14 @@
             // 
             this.Btn_buscar.FlatAppearance.BorderColor = System.Drawing.Color.LightCyan;
             this.Btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_buscar.ImageKey = "search.png";
+            this.Btn_buscar.ImageList = this.imageList2;
             this.Btn_buscar.Location = new System.Drawing.Point(255, 161);
             this.Btn_buscar.Name = "Btn_buscar";
             this.Btn_buscar.Size = new System.Drawing.Size(32, 20);
             this.Btn_buscar.TabIndex = 22;
-            this.Btn_buscar.Text = ":::";
             this.Btn_buscar.UseVisualStyleBackColor = true;
+            this.Btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
             // 
             // Txt_buscar
             // 
@@ -350,25 +366,30 @@
             this.label6.TabIndex = 20;
             this.label6.Text = "Buscar:";
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "Create_New.png");
-            this.imageList1.Images.SetKeyName(1, "eliminar.png");
-            this.imageList1.Images.SetKeyName(2, "new-file.png");
-            this.imageList1.Images.SetKeyName(3, "reporte.png");
-            this.imageList1.Images.SetKeyName(4, "salir.png");
-            // 
             // panelUnidadDeMedida
             // 
+            this.panelUnidadDeMedida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelUnidadDeMedida.Controls.Add(this.btnRetornarUm);
             this.panelUnidadDeMedida.Controls.Add(this.dgvUnidadDeMedida);
-            this.panelUnidadDeMedida.Location = new System.Drawing.Point(99, 122);
+            this.panelUnidadDeMedida.Location = new System.Drawing.Point(627, 124);
             this.panelUnidadDeMedida.Name = "panelUnidadDeMedida";
             this.panelUnidadDeMedida.Size = new System.Drawing.Size(216, 162);
             this.panelUnidadDeMedida.TabIndex = 23;
             this.panelUnidadDeMedida.Visible = false;
+            // 
+            // btnRetornarUm
+            // 
+            this.btnRetornarUm.BackColor = System.Drawing.Color.IndianRed;
+            this.btnRetornarUm.FlatAppearance.BorderColor = System.Drawing.Color.LightCyan;
+            this.btnRetornarUm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRetornarUm.ForeColor = System.Drawing.Color.White;
+            this.btnRetornarUm.Location = new System.Drawing.Point(126, 131);
+            this.btnRetornarUm.Name = "btnRetornarUm";
+            this.btnRetornarUm.Size = new System.Drawing.Size(87, 28);
+            this.btnRetornarUm.TabIndex = 24;
+            this.btnRetornarUm.Text = "Retornar";
+            this.btnRetornarUm.UseVisualStyleBackColor = false;
+            this.btnRetornarUm.Click += new System.EventHandler(this.btnRetornarUm_Click);
             // 
             // dgvUnidadDeMedida
             // 
@@ -385,39 +406,27 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvUnidadDeMedida.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvUnidadDeMedida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUnidadDeMedida.Location = new System.Drawing.Point(3, 0);
+            this.dgvUnidadDeMedida.Location = new System.Drawing.Point(3, 1);
             this.dgvUnidadDeMedida.Name = "dgvUnidadDeMedida";
             this.dgvUnidadDeMedida.ReadOnly = true;
             this.dgvUnidadDeMedida.Size = new System.Drawing.Size(210, 118);
             this.dgvUnidadDeMedida.TabIndex = 24;
-            // 
-            // btnRetornarUm
-            // 
-            this.btnRetornarUm.BackColor = System.Drawing.Color.DarkGray;
-            this.btnRetornarUm.FlatAppearance.BorderColor = System.Drawing.Color.LightCyan;
-            this.btnRetornarUm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRetornarUm.ForeColor = System.Drawing.Color.White;
-            this.btnRetornarUm.Location = new System.Drawing.Point(126, 131);
-            this.btnRetornarUm.Name = "btnRetornarUm";
-            this.btnRetornarUm.Size = new System.Drawing.Size(87, 28);
-            this.btnRetornarUm.TabIndex = 24;
-            this.btnRetornarUm.Text = "Retornar";
-            this.btnRetornarUm.UseVisualStyleBackColor = false;
-            this.btnRetornarUm.Click += new System.EventHandler(this.btnRetornarUm_Click);
+            this.dgvUnidadDeMedida.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUnidadDeMedida_CellContentDoubleClick);
             // 
             // panelCategorias
             // 
+            this.panelCategorias.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelCategorias.Controls.Add(this.btnRetornarCa);
             this.panelCategorias.Controls.Add(this.dgvCategorias);
             this.panelCategorias.Location = new System.Drawing.Point(395, 122);
             this.panelCategorias.Name = "panelCategorias";
-            this.panelCategorias.Size = new System.Drawing.Size(216, 159);
+            this.panelCategorias.Size = new System.Drawing.Size(216, 162);
             this.panelCategorias.TabIndex = 24;
             this.panelCategorias.Visible = false;
             // 
             // btnRetornarCa
             // 
-            this.btnRetornarCa.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRetornarCa.BackColor = System.Drawing.Color.IndianRed;
             this.btnRetornarCa.FlatAppearance.BorderColor = System.Drawing.Color.LightCyan;
             this.btnRetornarCa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRetornarCa.ForeColor = System.Drawing.Color.White;
@@ -449,6 +458,13 @@
             this.dgvCategorias.ReadOnly = true;
             this.dgvCategorias.Size = new System.Drawing.Size(210, 118);
             this.dgvCategorias.TabIndex = 24;
+            this.dgvCategorias.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategorias_CellContentDoubleClick);
+            // 
+            // imageList2
+            // 
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "search.png");
             // 
             // dgvUnidadMedida
             // 
@@ -527,5 +543,6 @@
         private System.Windows.Forms.Panel panelCategorias;
         private System.Windows.Forms.Button btnRetornarCa;
         private System.Windows.Forms.DataGridView dgvCategorias;
+        private System.Windows.Forms.ImageList imageList2;
     }
 }

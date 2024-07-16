@@ -20,6 +20,8 @@ namespace SOL_ALMACEN.PRECENTACION
         #region "Mis Variables"
         int nCodigoAr = 0;
         int nEstadoGuarda = 0;
+        int nCodigoUm = 0;
+        int nCodigoCa = 0;
         #endregion
 
         #region "Mis metodos"
@@ -80,7 +82,7 @@ namespace SOL_ALMACEN.PRECENTACION
             Txt_descripcion_ar.Text = "";
             Txt_descripcion_ca.Text = "";
             Txt_marca_ar.Text = "";
-            Txt_stock_actual.Text = "";
+            Txt_stock_actual.Text = "0";
             Txt_descripcion_um.Text = "";
         }
         private void editarSeleccion()
@@ -100,18 +102,84 @@ namespace SOL_ALMACEN.PRECENTACION
                 Txt_descripcion_um.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["descripcion_um"].Value);
                 Txt_descripcion_ca.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["codigo_categoria"].Value);
                 Txt_stock_actual.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["stock_actual"].Value);
+                this.nCodigoUm = Convert.ToInt32(dataGridView1.CurrentRow.Cells["codigo_um"].Value);
+                this.nCodigoCa = Convert.ToInt32(dataGridView1.CurrentRow.Cells["codigo_categoria"].Value);
+            }
+        }
 
+        #endregion
 
+        #region "Metodos para medidas y categorias"
+        private void FormatoUm()
+        {
+            dgvUnidadDeMedida.Columns[0].Width = 200;
+            dgvUnidadDeMedida.Columns[0].HeaderText = "MEDIDAS";
+            dgvUnidadDeMedida.Columns[1].Visible = false;
+            
+        }
+        private void ListadoUm()
+        {
+            D_Articulos datos = new D_Articulos();
+            dgvUnidadDeMedida.DataSource = datos.ListadoUm();
+            this.FormatoUm();
+        }
 
+        private void editarSeleccionUm()
+        {
+            if (string.IsNullOrEmpty(Convert.ToString(dgvUnidadDeMedida.CurrentRow.Cells["codigo_um"].Value)))
+            {
+                MessageBox.Show("Selecciona un elemento de la lista",
+                                "Aviso al sistema",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                this.nCodigoUm = Convert.ToInt32(dgvUnidadDeMedida.CurrentRow.Cells["codigo_um"].Value);
+                Txt_descripcion_um.Text = Convert.ToString(dgvUnidadDeMedida.CurrentRow.Cells["descripcion_um"].Value);
+                
+            }
+        }
+            private void FormatoCa()
+        {
+            dgvCategorias.Columns[0].Width = 200;
+            dgvCategorias.Columns[0].HeaderText = "CATEGORIAS";
+            dgvCategorias.Columns[1].Visible = false;
+            
+        }
+        private void ListadoCa()
+        {
+            D_Articulos datos = new D_Articulos();
+            dgvCategorias.DataSource = datos.ListadoCa();
+            this.FormatoCa();
+        }
+
+        private void editarSeleccionCa()
+        {
+            if (string.IsNullOrEmpty(Convert.ToString(dgvCategorias.CurrentRow.Cells["codigo_categoria"].Value)))
+            {
+                MessageBox.Show("Selecciona un elemento de la lista",
+                                "Aviso al sistema",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                this.nCodigoCa = Convert.ToInt32(dgvCategorias.CurrentRow.Cells["codigo_categoria"].Value);
+                Txt_descripcion_ca.Text = Convert.ToString(dgvCategorias.CurrentRow.Cells["descripcion_categoria"].Value);
 
             }
         }
+
+
 
         #endregion
 
         private void Frm_articulos_Load(object sender, EventArgs e)
         {
             this.Listado_ar("%");
+            this.ListadoCa();
+            this.ListadoUm();
         }
 
         private void Frm_articulos_Click(object sender, EventArgs e)
@@ -148,8 +216,8 @@ namespace SOL_ALMACEN.PRECENTACION
             oArt.codigo_articulos = nCodigoAr;
             oArt.descripcion_articulos = Txt_descripcion_ar.Text.Trim();
             oArt.marca_articulos = Txt_marca_ar.Text.Trim();
-            oArt.codigo_um = 1;
-            oArt.codigo_categoria = 1;
+            oArt.codigo_um = this.nCodigoUm;
+            oArt.codigo_categoria = this.nCodigoCa;
             oArt.stock_actual = Convert.ToDecimal(Txt_stock_actual.Text);
             oArt.fecha_crea = DateTime.Now.ToString("yyyy-MM-dd");
             oArt.fecha_modifica = DateTime.Now.ToString("yyyy-MM-dd");
@@ -166,6 +234,9 @@ namespace SOL_ALMACEN.PRECENTACION
                 this.estadoBotonesProcesos(false);
                 this.Listado_ar("%");
                 nEstadoGuarda = 0;
+                nCodigoAr = 0;
+                nCodigoCa = 0;
+                nCodigoUm = 0;
                 MessageBox.Show("Los datos han sido guardados correctamente",
                                 "Aviso al sistema",
                                 MessageBoxButtons.OK,
@@ -253,6 +324,28 @@ namespace SOL_ALMACEN.PRECENTACION
         private void btnRetornarCa_Click(object sender, EventArgs e)
         {
             panelCategorias.Visible = false;
+        }
+
+        private void dgvUnidadDeMedida_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.editarSeleccionUm();
+            panelUnidadDeMedida.Visible = false;
+        }
+
+        private void dgvCategorias_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.editarSeleccionCa();
+            panelCategorias.Visible = false;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Btn_buscar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
